@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> My first website lol </title>
+</head>
+<body>
+    <h1> My First heading </h1>
+    <p> My First Paragraph </p>
+
+
+
+
+
+    <form>
+
+        <label> first name:</label>
+        <input type="text">
+
+
+    </form>
+
+</body>
+</html>
+
