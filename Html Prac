@@ -1,34 +1,24 @@
-<!DOCTYPE html>
+This should work
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> My first website lol </title>
+    <title>My First Website</title>
 </head>
 <body>
-    <h1> My First heading </h1>
-    <p> My First Paragraph </p>
-
-
-
-
-
+    <h1>My First Heading</h1>
+    <p>My First Paragraph</p>
+    
     <form>
-
         <div>
-            <label for="fname">first name:</label>
-            <input type="text" id="fname" name="fname" placeholder=" John " required>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="John" required>
         </div>
-
         <br>
-
         <div>
-            <label for="lname">last name:</label>
-            <input type="text" id="lname" name="lname" placeholder=" Doe " required>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" required>
         </div>
-
-
     </form>
-
 </body>
 </html>
-
