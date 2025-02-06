@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for character encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- External CSS file for styling -->
+    <link rel="stylesheet" href="AiStyledthis.css"/>
+    
+    <title>User Input Form</title>
+    
+    <style>
+        /* Basic styling for body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        /* Centering the form container */
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        /* Styling for labels to be block elements */
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        /* Consistent styling for input fields and textarea */
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        /* Styling for the submit button */
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        /* Styling for the output display section */
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Input Form</h2>
+        
+        <!-- User input form -->
+        <form id="userForm">
+            <!-- Name input field -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <!-- Email input field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <!-- Age input field -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+
+            <!-- Short bio input field -->
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" rows="4" required></textarea>
+            
+            <!-- Submit button -->
+            <div class="button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        
+        <!-- Output display section -->
+        <div id="output">
+            <h3>Submitted Information</h3>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Age:</strong> <span id="displayAge"></span></p>
+            <p><strong>Bio:</strong> <span id="displayBio"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Add an event listener to the form submission
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            
+            // Retrieve user input values and trim whitespace
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let age = document.getElementById("age").value.trim();
+            let bio = document.getElementById("bio").value.trim();
+            
+            // Validate input fields to ensure no empty values
+            if (!name || !email || !age || !bio) {
+                alert("Please fill out all fields.");
+                return; // Stop execution if any field is empty
+            }
+            
+            // Display the submitted information in the output section
+            document.getElementById("displayName").textContent = name;
+            document.getElementById("displayEmail").textContent = email;
+            document.getElementById("displayAge").textContent = age;
+            document.getElementById("displayBio").textContent = bio;
+        });
+    </script>
+</body>
+</html>
